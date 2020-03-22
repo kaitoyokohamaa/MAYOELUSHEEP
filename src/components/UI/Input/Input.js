@@ -11,14 +11,14 @@ const input = props => {
     case "input":
       inputElement = (
         <div>
-        <p className={classes.Textleft}>{props.elementConfig.type}</p>
-        <input
-          className={inputClasses.join(" ")}
-          //{type: "text", placeholder: "ZIP Code"}etc
-          {...props.elementConfig}
-          value={props.value}
-          onChange={props.changed}
-        />
+          <p className={classes.Textleft}>{props.elementConfig.type}</p>
+          <input
+            className={inputClasses.join(" ")}
+            //{type: "text", placeholder: "ZIP Code"}etc
+            {...props.elementConfig}
+            value={props.value}
+            onChange={props.changed}
+          />
         </div>
       );
       break;
@@ -34,17 +34,20 @@ const input = props => {
       break;
     case "select":
       inputElement = (
-        <select
-          className={inputClasses.join(" ")}
-          value={props.value}
-          onChange={props.changed}
-        >
-          {props.elementConfig.options.map(option => (
-            <option key={option.value} value={option.value}>
-              {option.displayValue}
-            </option>
-          ))}
-        </select>
+        <div>
+          <p className={classes.Textleft}>{props.elementConfig.type}</p>
+          <select
+            className={inputClasses.join(" ")}
+            value={props.value}
+            onChange={props.changed}
+          >
+            {props.elementConfig.options.map(option => (
+              <option key={option.value} value={option.value}>
+                {option.displayValue}
+              </option>
+            ))}
+          </select>
+        </div>
       );
       break;
     default:

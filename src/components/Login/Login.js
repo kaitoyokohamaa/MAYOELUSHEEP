@@ -54,7 +54,7 @@ class Login extends Component{
       };
 
     SignIn = (event) => {
-        const urlsign = 'https://teachapi.herokuapp.com/sign_in';
+        const urlsign = 'https://mayoeru-sheep.herokuapp.com//api/v1/sign_up';
         event.preventDefault();
         alert("loh")
         let data = {
@@ -89,6 +89,7 @@ class Login extends Component{
             this.setState({redirectToReferrer: true});
           }
       };
+
 
   checkValidity(value, rules) {
     let isValid = true;
@@ -134,7 +135,7 @@ class Login extends Component{
             config: this.state.controls[key]
           });
         }
-        const form = formElementsArray.map(formElement => (
+      const form = formElementsArray.map(formElement => (
           <Input
             key={formElement.id}
             elementType={formElement.config.elementType}
@@ -152,10 +153,10 @@ class Login extends Component{
             <div className={classes.Auth}>
               <form>
                 {form}
-                <Button clicked={this.SignIn} btnType="Success"> ログイン</Button>
+                <Button style={{textAlign:'left'}} clicked={this.SignIn} btnType="Success"> ログイン</Button>
               </form>
               <div className={classes.NavigationItem}>
-                <Link to="/signin">新規登録</Link>
+                <Link to="/signup">新規登録</Link>
               </div>
             </div>
           </div>

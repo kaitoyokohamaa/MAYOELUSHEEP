@@ -5,7 +5,7 @@ class Title extends Component {
     return (
       <div>
         <Link to="/login">ログインはこちら</Link>
-        <Link to="/signin">新規登録はこちら</Link>
+        <Link to="/signup">新規登録はこちら</Link>
       </div>
     );
   }
