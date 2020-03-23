@@ -66,8 +66,8 @@ class Signup extends Component {
     return (
       <Container style={{ textAlign: "left" }}>
         <Row>
-          <Col lg={4}>
-            <Form style={{ marginTop: "10%", marginRight: "28%" }}>
+          <Col lg={5}>
+            <Form style={{ marginTop: "25%", marginRight: "28%" }}>
               <img src={LOGO} alt="MyLogo" />
               <Form.Group controlId="formBasicEmail">
                 <Form.Label>お名前</Form.Label>
@@ -135,9 +135,9 @@ class Signup extends Component {
               </Button>
             </Form>
           </Col>
-          <Col lg={8}>
+          <Col lg={7}>
             <img
-              style={{ maxWidth: "100%", height: "95vh", margin: "0" }}
+              style={{ maxWidth: "800px", height: "100vh", margin: "0" }}
               src={TOP}
               alt="toppic"
             />
