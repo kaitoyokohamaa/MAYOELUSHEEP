@@ -5,70 +5,61 @@ import { Button } from "react-bootstrap";
 import { Container, Row, Col } from "react-bootstrap";
 import LOGO from "../../assets/img/logo.jpg";
 import TOP from "../../assets/img/top.jpg";
+import axios from "../../axios";
 class Signup extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: "",
+      name: "",
       email: "",
       old: "",
       gender: "",
-      password: "",
-      redirectToReferrer: false
+      password: ""
+      //   redirectToReferrer: false
     };
     this.signup = this.signup.bind(this);
     this.onChange = this.onChange.bind(this);
   }
 
   signup(event) {
-    alert("loh");
-    if (
-      this.state.username &&
-      this.state.email &&
-      this.state.old &&
-      this.state.gender &&
-      this.state.password
-    ) {
-      const urlsign = "https://mayoeru-sheep.herokuapp.com//api/v1/sign_up";
-      event.preventDefault();
-      alert("loh");
-      let data = {
-        sign_in_user_params: {
-          email: this.state.controls.email.value,
-          password: this.state.controls.password.value,
-          password_confirmation: this.state.controls.passwordre.value
-        }
-      };
-      fetch(urlsign, {
-        method: "POST",
+    // let proxy = "http://cors-anywhere.herokuapp.com/";
+    // const url = `${proxy}https://mayoeru-sheep.herokuapp.com/api/v1/sign_up`;
+    event.preventDefault();
+    let data = {
+      sign_up_user_params: {
+        name: this.state.name,
+        bio: this.state.old,
+        email: this.state.email,
+        // gender: 1,
+        password: this.state.password,
+        password_confirmation: this.state.password
+      }
+    };
+    axios
+      .post("/sign_up", JSON.stringify(data), {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
+        }
       })
-        .then(response => response.json())
-        .then(json => {
-          //ユーザ生成時に以下の情報をローカルストレージに入れる。
-          console.log(json);
-          window.localStorage.setItem("token", json.token);
-          window.localStorage.setItem("id", json.id);
-          window.localStorage.setItem("token", json.token);
-        })
-        .then(responseData => {
-          console.log(responseData);
-        })
-        .catch(err => {
-          console.log(err, err.data);
-        });
-      if (localStorage.token) {
-        this.setState({ redirectToReferrer: true });
-      }
-    }
+      .then(json => {
+        alert("loh");
+        //ユーザ生成時に以下の情報をローカルストレージに入れる。
+        console.log(json.data);
+        window.localStorage.setItem("token", json.data.token);
+        window.localStorage.setItem("id", json.data.id);
+        window.localStorage.setItem("token", json.data.token);
+      })
+      .then(responseData => {
+        console.log(responseData);
+      })
+      .catch(err => {
+        console.log(err, err.data);
+      });
+    alert("koko");
   }
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value });
-    console.log([e.target.name], e.target.value);
   }
 
   render() {
@@ -100,7 +91,8 @@ class Signup extends Component {
                 <Form.Label>年齢</Form.Label>
                 <Form.Control as="select" name="old" onChange={this.onChange}>
                   <option>18</option>
-                  <option>19</option>ß<option>20</option>
+                  <option>19</option>
+                  <option>20</option>
                   <option>21</option>
                   <option>22</option>
                   <option>23</option>
