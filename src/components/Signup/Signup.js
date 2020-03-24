@@ -14,7 +14,8 @@ class Signup extends Component {
       email: "",
       old: "",
       gender: "",
-      password: ""
+      password: "",
+      password_confirm: ""
       //   redirectToReferrer: false
     };
     this.signup = this.signup.bind(this);
@@ -22,33 +23,25 @@ class Signup extends Component {
   }
 
   signup(event) {
-    // let proxy = "http://cors-anywhere.herokuapp.com/";
-    // const url = `${proxy}https://mayoeru-sheep.herokuapp.com/api/v1/sign_up`;
     event.preventDefault();
     let data = {
-      sign_up_user_params: {
+      user_params: {
         name: this.state.name,
-        bio: this.state.old,
-        email: this.state.email,
-        // gender: 1,
+        age: this.state.old,
+        gender: 1,
+        mail: this.state.email,
         password: this.state.password,
-        password_confirmation: this.state.password
+        password_confirm: this.state.password_confirm
       }
     };
     axios
-      .post("/sign_up", JSON.stringify(data), {
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json"
-        }
-      })
+      .post("/sign_up", data)
       .then(json => {
         alert("loh");
         //ユーザ生成時に以下の情報をローカルストレージに入れる。
         console.log(json.data);
         window.localStorage.setItem("token", json.data.token);
         window.localStorage.setItem("id", json.data.id);
-        window.localStorage.setItem("token", json.data.token);
       })
       .then(responseData => {
         console.log(responseData);
@@ -124,7 +117,7 @@ class Signup extends Component {
                 />
                 <Form.Label>パスワード</Form.Label>
                 <Form.Control
-                  name="password"
+                  name="password_confirm"
                   type="password"
                   placeholder="Password"
                   onChange={this.onChange}

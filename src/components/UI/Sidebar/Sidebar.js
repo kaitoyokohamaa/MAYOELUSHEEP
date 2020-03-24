@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { Button, Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { pink } from "color-name";
 import LOGO from "../../../assets/img/logo.jpg";
 class Sidebar extends Component {
   render() {
