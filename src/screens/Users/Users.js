@@ -1,6 +1,6 @@
 import React from "react";
 import Sidebar from "../../components/UI/Sidebar/Sidebar";
-import { Card, CardGroup } from "react-bootstrap";
+import { Card, CardColumns } from "react-bootstrap";
 const User = () => {
   return (
     <div
@@ -9,11 +9,10 @@ const User = () => {
       }}
     >
       <Sidebar />
-      <CardGroup>
+      <CardColumns>
         <Card>
           <Card.Img
             style={{
-              height: "270px",
               borderRadius: "18px 18px 0 0 "
             }}
             variant="top"
@@ -26,8 +25,6 @@ const User = () => {
         <Card>
           <Card.Img
             style={{
-              height: "270px",
-
               borderRadius: "18px 18px 0 0 "
             }}
             variant="top"
@@ -40,7 +37,6 @@ const User = () => {
         <Card>
           <Card.Img
             style={{
-              height: "270px",
               borderRadius: "18px 18px 0 0 "
             }}
             variant="top"
@@ -53,7 +49,6 @@ const User = () => {
         <Card>
           <Card.Img
             style={{
-              height: "270px",
               borderRadius: "18px 18px 0 0 "
             }}
             variant="top"
@@ -66,7 +61,6 @@ const User = () => {
         <Card>
           <Card.Img
             style={{
-              height: "270px",
               borderRadius: "18px 18px 0 0 "
             }}
             variant="top"
@@ -76,7 +70,7 @@ const User = () => {
             <Card.Title>Card title</Card.Title>
           </Card.Body>
         </Card>{" "}
-      </CardGroup>
+      </CardColumns>
     </div>
   );
 };

@@ -4,6 +4,7 @@ import Lonely from "../../components/UI/MatchUI/lonely";
 import data from "../.././data.json";
 import Sidebar from "../UI/Sidebar/Sidebar";
 import "../../App.css";
+import axios from "../../axios";
 const Matches = () => {
   const [people, setPeople] = useState(data);
   const [likedUsers, setLikedUsers] = useState([]);
@@ -27,6 +28,23 @@ const Matches = () => {
           setLikedUsers(newLikedUsers);
           setPeople(removedPersonFromDatasrc(people, userId));
         }
+        axios
+          .post("/like", {
+            userid: userId
+          })
+          .then(json => {
+            alert("loh");
+            //ユーザ生成時に以下の情報をローカルストレージに入れる。
+            console.log(json.data);
+            window.localStorage.setItem("token", json.data.token);
+            window.localStorage.setItem("id", json.data.id);
+            if (json.status === 200) {
+              this.setState({ logined: true });
+            }
+          })
+          .catch(err => {
+            console.log(err, err.data);
+          });
         break;
       case "ADD_TO_DISLIKED_USERS":
         if (!people[activeUser].dislikedUsers.includes(userId)) {
