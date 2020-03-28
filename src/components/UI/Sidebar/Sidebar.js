@@ -1,19 +1,12 @@
 import React, { Component } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import LOGO from "../../../assets/img/logo.jpg";
 class Sidebar extends Component {
   render() {
     return (
       <Container>
-        <img
-          src={LOGO}
-          alt="LOGO"
-          style={{
-            width: "100%",
-            marginRight: "10px"
-          }}
-        />
+        <img src={LOGO} alt="LOGO" />
         <div
           style={{
             padding: "20px",
@@ -21,6 +14,7 @@ class Sidebar extends Component {
           }}
         >
           <Link
+            to={"/matches"}
             style={{
               color: "#f73f5f",
               textDecoration: "none",
@@ -36,6 +30,7 @@ class Sidebar extends Component {
           }}
         >
           <Link
+            to={"/matches"}
             style={{
               color: "#f73f5f",
               textDecoration: "none",
@@ -51,6 +46,7 @@ class Sidebar extends Component {
           }}
         >
           <Link
+            to={"/users"}
             style={{
               color: "#f73f5f",
               textDecoration: "none",
@@ -66,6 +62,7 @@ class Sidebar extends Component {
           }}
         >
           <Link
+            to={"/matches"}
             style={{
               color: "#f73f5f",
               textDecoration: "none",

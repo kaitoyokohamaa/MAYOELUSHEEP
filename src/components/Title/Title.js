@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Sidebar from "../UI/Sidebar/Sidebar";
 import Matches from "../Matches/Matches";
+import Users from "../../screens/Users/Users";
 class Title extends Component {
   render() {
     return (
@@ -10,9 +11,7 @@ class Title extends Component {
           display: "flex"
         }}
       >
-        {/* <Link to="/login">ログインはこちら</Link>
-        <Link to="/signup">新規登録はこちら</Link> */}
-        <Sidebar />
+        <Users />
         {/* <Matches /> */}
       </div>
     );

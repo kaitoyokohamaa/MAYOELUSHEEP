@@ -6,6 +6,7 @@ import Title from "./components/Title/Title";
 import Signup from "./screens/Signup/Signup";
 import Matches from "./components/Matches/Matches";
 import Profile from "./screens/Profile/Profile";
+import Users from "./screens/Users/Users";
 function App() {
   return (
     <div className="App">
@@ -14,6 +15,7 @@ function App() {
         <Route path="/signup" component={Signup} />
         <Route path="/Matches" component={Matches} />
         <Route path="/profile" component={Profile} />
+        <Route path="/users" component={Users} />
         <Route path="/" exact component={Title} />
       </Switch>
     </div>
