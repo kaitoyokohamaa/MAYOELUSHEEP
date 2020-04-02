@@ -52,7 +52,7 @@ class Login extends Component {
     return (
       <div>
         {this.state.logined ? (
-          <Redirect to={"/home"} />
+          <Redirect to={"/matches"} />
         ) : (
           <Container style={{ textAlign: "left" }}>
             <Row>
