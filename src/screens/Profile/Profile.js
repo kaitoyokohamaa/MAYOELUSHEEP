@@ -31,7 +31,11 @@ export default class Profile extends Component {
         >
           <img src={LOGO} alt="logo" />
         </div>
-        <Container>
+        <Container
+          style={{
+            textAlign: "center"
+          }}
+        >
           <Row>
             <Col>
               <div>
