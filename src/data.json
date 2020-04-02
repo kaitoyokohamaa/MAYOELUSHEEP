@@ -1,13 +1,10 @@
 [{
         "id": 0,
         "name": "Karl",
-        "desc": "Developer",
         "age": 26,
         "image": "1.jpg",
         "likedUsers": [],
-        "superLikedUsers": [],
-        "dislikedUsers": [],
-        "likedBy": []
+        "dislikedUsers": []
     },
     {
         "id": 1,

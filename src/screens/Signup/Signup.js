@@ -28,7 +28,7 @@ class Signup extends Component {
       user_params: {
         name: this.state.name,
         age: this.state.old,
-        gender: 1,
+        gender: this.state.gender,
         mail: this.state.email,
         password: this.state.password,
         password_confirm: this.state.password_confirm
