@@ -1,0 +1,17 @@
+.progress {
+  transform: rotate(90deg);
+  margin-top: 266px;
+  width: 400px;
+  margin-left: -59px;
+}
+
+.progress-bar.progress-bar-animated.progress-bar-striped {
+  background-color: #dc3545;
+}
+
+.progressbarstyle {
+  background-color: white;
+  height: 100vh;
+  width: 20%;
+  box-shadow: 10px 10px 15px -10px;
+}
