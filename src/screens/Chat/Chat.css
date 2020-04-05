@@ -1,0 +1,13 @@
+.chatContainer {
+
+    margin-top: 90px;
+    width: 90%;
+
+    padding-top: 20px;
+}
+
+form {
+    width: 100%;
+    bottom: 0;
+    possition: "relative"
+}

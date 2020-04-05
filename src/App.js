@@ -8,6 +8,7 @@ import Matches from "./components/Matches/Matches";
 import Profile from "./screens/Profile/Profile";
 import Users from "./screens/Users/Users";
 import Register from "./screens/Register/Register";
+import Chat from "./screens/Chat/Chat";
 function App() {
   return (
     <div className="App">
@@ -18,6 +19,8 @@ function App() {
         <Route path="/profile" component={Profile} />
         <Route path="/users" component={Users} />
         <Route path="/register" component={Register} />
+        <Route path="/register" component={Register} />
+        <Route path="/chat" component={Chat} />
         <Route path="/" exact component={Title} />
       </Switch>
     </div>
