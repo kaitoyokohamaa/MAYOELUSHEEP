@@ -1,6 +1,5 @@
 import React from "react";
 import Actions from "./Actions";
-
 const Person = ({ person, modifySuperficialChoices }) => {
   const { name, age, image } = person;
   return (

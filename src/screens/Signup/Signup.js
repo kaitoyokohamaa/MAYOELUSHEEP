@@ -22,9 +22,9 @@ const Signup = () => {
     let data = {
       user_params: {
         name: Name,
-        age: Email,
-        gender: Old,
-        mail: Gender,
+        age: Old,
+        gender: Gender,
+        mail: Email,
         password: Password,
         password_confirm: Password_confirm
       }

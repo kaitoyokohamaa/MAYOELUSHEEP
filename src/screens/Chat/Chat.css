@@ -1,13 +1,24 @@
 .chatContainer {
-
-    margin-top: 90px;
-    width: 90%;
-
+    margin-top: 20px;
+    width: 100%;
     padding-top: 20px;
 }
 
 form {
     width: 100%;
     bottom: 0;
-    possition: "relative"
+}
+
+.chatHeader {
+    position: fixed;
+    color: black;
+    text-align: center;
+    width: 65%;
+    top: 0;
+    font-size: 10px;
+
+}
+
+h4 {
+    font-size: 23px;
 }
