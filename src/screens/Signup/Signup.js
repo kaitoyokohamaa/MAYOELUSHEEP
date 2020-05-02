@@ -30,7 +30,7 @@ const Signup = () => {
       }
     };
     axios
-      .post("/sign_up", data)
+      .post("/v1/sign_up", data)
       .then(json => {
         alert("loh");
         //ユーザ生成時に以下の情報をローカルストレージに入れる。

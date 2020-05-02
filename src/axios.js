@@ -1,7 +1,8 @@
 import axios from "axios";
-let proxy = "http://cors-anywhere.herokuapp.com/";
+
 const instance = axios.create({
-  baseURL: `${proxy}https://mayoeru-sheep.herokuapp.com/api/v1/`
+  baseURL: `https://mayoeru-api.herokuapp.com/api`,
+  "Access-Control-Allow-Origin": "http://localhost:3000"
 });
 
 export default instance;
