@@ -8,6 +8,7 @@
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
     "cors": "^2.8.5",
+    "history": "^4.10.1",
     "jquery": "^3.4.1",
     "material-ui-icons": "^1.0.0-beta.36",
     "nuka-carousel": "^4.6.6",
