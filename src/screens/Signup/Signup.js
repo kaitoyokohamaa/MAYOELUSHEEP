@@ -32,7 +32,6 @@ const Signup = () => {
     axios
       .post("/v1/sign_up", data)
       .then(json => {
-        alert("loh");
         //ユーザ生成時に以下の情報をローカルストレージに入れる。
         console.log(json.data);
         window.localStorage.setItem("token", json.data.token);
@@ -48,7 +47,6 @@ const Signup = () => {
       .catch(err => {
         console.log(err, err.data);
       });
-    alert("koko");
     console.log("RENDRING INGREDIENTS", Name);
   };
 
