@@ -18,6 +18,7 @@ const dislike = () => {
       console.log(err, err.data);
     });
 };
+
 const Actions = ({ person, modifySuperficialChoices }) => (
   <div id="actions">
     <Dislike

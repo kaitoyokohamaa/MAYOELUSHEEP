@@ -2,10 +2,43 @@ import React, { useState } from "react";
 import { Form, Button, ProgressBar } from "react-bootstrap";
 import LOGO from "../../assets/img/logo.jpg";
 import "./Register.css";
+import axios from "../../axios";
 const Register = () => {
   const [Profile, setProfile] = useState("");
   const [Campany, setCampany] = useState("");
   const [University, setUniversity] = useState("");
+
+  const register = event => {
+    event.preventDefault();
+
+    let data = {
+      user_params: {
+        intro: Profile,
+        job: Campany,
+        college: University
+      }
+    };
+
+    axios
+      .POST("/me/requests", data)
+      .then(json => {
+        alert("loh");
+        //ユーザ生成時に以下の情報をローカルストレージに入れる。
+        console.log(json.data);
+        window.localStorage.setItem("token", json.data.token);
+        window.localStorage.setItem("name", json.data.name);
+        window.localStorage.setItem("id", json.data.id);
+      })
+      .then(responseData => {
+        alert("jojo");
+        console.log(responseData);
+      })
+      .catch(err => {
+        console.log(err, err.data);
+      });
+    alert("koko");
+  };
+
   return (
     <div
       style={{
@@ -67,6 +100,7 @@ const Register = () => {
             />
           </Form.Group>
           <Button
+            onClick={register}
             variant="danger"
             type="submit"
             style={{ width: "100%", marginTop: "10%" }}

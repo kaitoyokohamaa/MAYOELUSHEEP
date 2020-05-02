@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Person from "../../components/UI/MatchUI/Person";
 import Lonely from "../../components/UI/MatchUI/lonely";
 import data from "../.././data.json";
@@ -6,6 +6,20 @@ import Sidebar from "../UI/Sidebar/Sidebar";
 import "../../App.css";
 import axios from "../../axios";
 const Matches = () => {
+  useEffect(() => {
+    axios
+      .post(`match_requests/`)
+      .then(json => {
+        alert("loh");
+        console.log(json.data);
+      })
+      .then(responseData => {
+        console.log(responseData);
+      })
+      .catch(err => {
+        console.log(err, err.data);
+      });
+  });
   const [people, setPeople] = useState(data);
 
   const activeUser = 0;
@@ -83,5 +97,4 @@ const Matches = () => {
     </div>
   );
 };
-
 export default Matches;
