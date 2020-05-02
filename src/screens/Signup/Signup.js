@@ -37,8 +37,11 @@ const Signup = () => {
         window.localStorage.setItem("token", json.data.token);
         window.localStorage.setItem("name", json.data.name);
         window.localStorage.setItem("id", json.data.id);
-        if (json.status === 200) {
+
+        if (formIsValid() && json.status === 200) {
           setAuth(true);
+        } else {
+          alert("パスワードが間違ってます");
         }
       })
       .then(responseData => {
@@ -53,7 +56,9 @@ const Signup = () => {
   useEffect(() => {
     console.log("RENDRING INGREDIENTS", Name);
   }, [Name]);
-
+  const formIsValid = () => Password === Password_confirm;
+  console.log(Password);
+  console.log(Password_confirm);
   return (
     <div>
       {Auth ? (
@@ -98,6 +103,7 @@ const Signup = () => {
                       setOld(event.target.value);
                     }}
                   >
+                    <option>選んでください！</option>
                     <option>18</option>
                     <option>19</option>
                     <option>20</option>
