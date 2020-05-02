@@ -22,9 +22,9 @@ const Signup = () => {
     let data = {
       user_params: {
         name: Name,
-        age: Email,
-        gender: Old,
-        mail: Gender,
+        age: Old,
+        gender: Gender,
+        mail: Email,
         password: Password,
         password_confirm: Password_confirm
       }
@@ -36,6 +36,7 @@ const Signup = () => {
         //ユーザ生成時に以下の情報をローカルストレージに入れる。
         console.log(json.data);
         window.localStorage.setItem("token", json.data.token);
+        window.localStorage.setItem("name", json.data.name);
         window.localStorage.setItem("id", json.data.id);
         if (json.status === 200) {
           setAuth(true);
