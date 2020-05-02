@@ -7,7 +7,7 @@ import { Redirect } from "react-router-dom";
 import LOGO from "../../assets/img/logo.jpg";
 import TOP from "../../assets/img/top.jpg";
 import axios from "../../axios";
-
+import classes from "./Signup.module.css";
 const Signup = () => {
   const [Name, setName] = useState("");
   const [Email, setEmail] = useState("");
@@ -15,6 +15,7 @@ const Signup = () => {
   const [Gender, setGender] = useState("");
   const [Password, setPassword] = useState("");
   const [Password_confirm, setPassword_confirm] = useState("");
+
   const [Auth, setAuth] = useState(false);
 
   const signup = event => {
@@ -57,6 +58,7 @@ const Signup = () => {
     console.log("RENDRING INGREDIENTS", Name);
   }, [Name]);
   const formIsValid = () => Password === Password_confirm;
+
   console.log(Password);
   console.log(Password_confirm);
   return (
@@ -67,7 +69,7 @@ const Signup = () => {
         <Container style={{ textAlign: "left" }}>
           <Row>
             <Col lg={5}>
-              <Form style={{ marginTop: "25%", marginRight: "28%" }}>
+              <Form className={classes.form}>
                 <img src={LOGO} alt="MyLogo" />
                 <Form.Group controlId="formBasicEmail">
                   <Form.Label>お名前</Form.Label>
@@ -154,17 +156,20 @@ const Signup = () => {
                     }}
                   />
                 </Form.Group>
-                <Button variant="danger" type="submit" onClick={signup}>
-                  始める
-                </Button>
+                <div className={classes.submitbtn}>
+                  <Button
+                    className={classes.submitbtn_size}
+                    variant="danger"
+                    type="submit"
+                    onClick={signup}
+                  >
+                    始める
+                  </Button>
+                </div>
               </Form>
             </Col>
             <Col lg={7}>
-              <img
-                style={{ maxWidth: "800px", height: "100vh", margin: "0" }}
-                src={TOP}
-                alt="toppic"
-              />
+              <img className={classes.main_img} src={TOP} alt="toppic" />
             </Col>
           </Row>
         </Container>
