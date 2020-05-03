@@ -33,18 +33,20 @@ export default class Profile extends Component {
             display: "flex"
           }}
         >
-          <div className="progressbarstyle">
-            <div>
-              <img
-                src={LOGO}
-                alt="logo"
-                style={{
-                  width: "250px",
-                  paddingTop: "20px"
-                }}
-              />
+          <div className="sidebar">
+            <div className="progressbarstyle">
+              <div>
+                <img
+                  src={LOGO}
+                  alt="logo"
+                  style={{
+                    width: "250px",
+                    paddingTop: "20px"
+                  }}
+                />
+              </div>
+              <ProgressBar animated now={45} />
             </div>
-            <ProgressBar animated now={45} />
           </div>
           <Container
             style={{
@@ -54,7 +56,11 @@ export default class Profile extends Component {
             <Row>
               <Col>
                 <div>
+                  <p className="mainname">
+                    プロフィールにしたい画像をアップロードしよう！
+                  </p>
                   <label
+                    className="img_upload"
                     htmlFor="file_upload"
                     onChange={this.fileSelectedHandler}
                     style={{
