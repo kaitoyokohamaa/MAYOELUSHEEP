@@ -15,3 +15,21 @@
   width: 20%;
   box-shadow: 10px 10px 15px -10px;
 }
+
+@media screen and (max-width: 414px) {
+  .sidebar {
+    display: none;
+  }
+
+  .img_upload {
+    width: 100%;
+  }
+
+  .mainname {
+    font-size: 12px;
+    margin-top: 30%;
+    margin-bottom: 20%;
+  }
+
+
+}

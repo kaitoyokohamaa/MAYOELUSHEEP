@@ -1,15 +1,14 @@
-@media screen and (min-width: 1080px) {
-    .main_img {
-        max-width: 800px;
-        height: 100vh;
-        margin: 0%;
-    }
-
-    .form {
-        margin-top: 40px;
-        margin-right: 50px;
-    }
+.main_img {
+    max-width: 800px;
+    height: 100vh;
+    margin: 0%;
 }
+
+.form {
+    margin-top: 40px;
+    margin-right: 50px;
+}
+
 
 @media screen and (max-width: 414px) {
     .main_img {
@@ -27,6 +26,7 @@
     }
 
     .submitbtn_size {
+        margin-top: 10px;
         width: 60%;
         border-radius: 14px;
     }
