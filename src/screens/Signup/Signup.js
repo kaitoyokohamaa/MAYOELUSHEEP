@@ -74,7 +74,7 @@ const Signup = () => {
             <Row>
               <Col lg={5}>
                 <Form className={classes.form}>
-                  <img src={LOGO} alt="MyLogo" />
+                  <img className={classes.myImg} src={LOGO} alt="MyLogo" />
                   <Form.Group controlId="formBasicEmail">
                     <Form.Label>お名前</Form.Label>
                     <Form.Control
@@ -87,7 +87,10 @@ const Signup = () => {
                       }}
                     />
                   </Form.Group>
-                  <Form.Group controlId="formBasicEmail">
+                  <Form.Group
+                    controlId="formBasicEmail"
+                    className={classes.form_group}
+                  >
                     <Form.Label>メールアドレス</Form.Label>
                     <Form.Control
                       name="email"
@@ -99,9 +102,10 @@ const Signup = () => {
                       }}
                     />
                   </Form.Group>
-                  <Form.Group controlId="exampleForm.ControlSelect1">
+                  <Form.Group className={classes.form_group}>
                     <Form.Label>年齢</Form.Label>
                     <Form.Control
+                      className={classes.form_group}
                       as="select"
                       name="old"
                       value={Old}
@@ -124,6 +128,8 @@ const Signup = () => {
                       <option>29</option>
                       <option>30</option>
                     </Form.Control>
+                  </Form.Group>
+                  <Form.Group>
                     <Form.Label>性別</Form.Label>
                     <Form.Control
                       as="select"
@@ -149,6 +155,8 @@ const Signup = () => {
                         setPassword(event.target.value);
                       }}
                     />
+                  </Form.Group>
+                  <Form.Group>
                     <Form.Label>パスワード再確認</Form.Label>
                     <Form.Control
                       name="password_confirm"
@@ -184,7 +192,7 @@ const Signup = () => {
             <Row>
               <Col lg={5}>
                 <Form className={classes.form}>
-                  <img src={LOGO} alt="MyLogo" />
+                  <img className={classes.myImg} src={LOGO} alt="MyLogo" />
                   <Form.Group controlId="formBasicEmail">
                     <Form.Label>お名前</Form.Label>
                     <Form.Control
@@ -234,6 +242,8 @@ const Signup = () => {
                       <option>29</option>
                       <option>30</option>
                     </Form.Control>
+                  </Form.Group>
+                  <Form.Group controlId="formBasicEmail">
                     <Form.Label>性別</Form.Label>
                     <Form.Control
                       as="select"
@@ -259,6 +269,8 @@ const Signup = () => {
                         setPassword(event.target.value);
                       }}
                     />
+                  </Form.Group>
+                  <Form.Group>
                     <Form.Label>パスワード再確認</Form.Label>
                     <Form.Control
                       name="password_confirm"
