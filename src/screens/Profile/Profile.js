@@ -63,16 +63,6 @@ export default class Profile extends Component {
                     className="img_upload"
                     htmlFor="file_upload"
                     onChange={this.fileSelectedHandler}
-                    style={{
-                      width: "30%",
-                      backgroundColor: "#ececec",
-                      borderRadius: "9%",
-                      border: "1px solid",
-                      padding: "21% 10%",
-                      fontSize: "45px",
-                      color: "#fff",
-                      marginTop: "5%"
-                    }}
                   >
                     +
                   </label>
@@ -87,10 +77,7 @@ export default class Profile extends Component {
 
                 <Button
                   variant="danger"
-                  style={{
-                    width: "25%",
-                    margin: "20px auto"
-                  }}
+                  className="registerBtn"
                   type="button"
                   onClick={this.fileUploadHandler}
                 >
