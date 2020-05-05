@@ -6,7 +6,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   line-height: 1;
-  background-color: #f7f7f7;
+  background-color: #f5f7fa;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -165,8 +165,10 @@ header .fl:last-child {
 }
 
 .matches {
-  margin-left: 180px;
-  margin-top: 40px;
+  padding-left: 410px;
+  padding-right: 410px;
+  padding-top: 40px;
+  background: #f5f7fa;
 }
 
 /* Stolen CSS */

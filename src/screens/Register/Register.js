@@ -42,8 +42,7 @@ const Register = () => {
   return (
     <div
       style={{
-        textAlign: "left",
-        paddingLeft: "20px"
+        textAlign: "left"
       }}
     >
       <div
@@ -51,7 +50,7 @@ const Register = () => {
           display: "flex"
         }}
       >
-        <div className="progressbarstyle">
+        <div className="progressbar_style">
           <div>
             <img
               src={LOGO}
@@ -64,7 +63,9 @@ const Register = () => {
           </div>
           <ProgressBar animated now={100} />
         </div>
-        <Form style={{ width: "20%", margin: "0 auto", marginTop: "10%" }}>
+
+        <Form className="form_size">
+          <p className="intro_name">自己紹介文</p>
           <Form.Group controlId="formGroupProfile">
             <Form.Label>プロフィール</Form.Label>
             <Form.Control
