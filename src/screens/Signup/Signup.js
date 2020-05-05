@@ -71,16 +71,16 @@ const Signup = () => {
       {Loading ? (
         <div className={classes.bl_form}>
           <figure className={classes.bl_imgWrapper}>
-            <img className={classes.bl_myImg} src={LOGO} alt="MyLogo" />
+            <img className={classes.bl_myImgSize} src={LOGO} alt="MyLogo" />
           </figure>
           <div className={classes.bl_Inforamation}>
             <p className={classes.bl_InforamationP}>新規登録</p>
-            <p className={classes.bl_InforamationP2}>
+            <p className={classes.bl_averageFont}>
               以下の項目にご記入の上、「始める」ボタンを押してください。
             </p>
           </div>
           <Divider />
-          <Form className={classes.form}>
+          <Form className={classes.bl_averageFont}>
             <Form.Group controlId="formBasicEmail">
               <Form.Label>お名前</Form.Label>
               <Form.Control
@@ -180,7 +180,7 @@ const Signup = () => {
       ) : (
         <div className={classes.bl_form}>
           <figure className={classes.bl_imgWrapper}>
-            <img className={classes.bl_myImg} src={LOGO} alt="MyLogo" />
+            <img className={classes.bl_myImgSize} src={LOGO} alt="MyLogo" />
           </figure>
           <div className={classes.bl_Inforamation}>
             <p className={classes.bl_InforamationP}>ローディング中！</p>
