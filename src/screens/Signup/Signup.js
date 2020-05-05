@@ -4,7 +4,7 @@ import { Form } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import Divider from "@material-ui/core/Divider";
 import { Redirect } from "react-router-dom";
-import LOGO from "../../assets/img/logo.jpg";
+
 import axios from "../../axios";
 import classes from "./Signup.module.css";
 const Signup = () => {
@@ -70,9 +70,6 @@ const Signup = () => {
     <div>
       {Loading ? (
         <div className={classes.bl_form}>
-          <figure className={classes.bl_imgWrapper}>
-            <img className={classes.bl_myImgSize} src={LOGO} alt="MyLogo" />
-          </figure>
           <div className={classes.bl_Inforamation}>
             <p className={classes.bl_InforamationP}>新規登録</p>
             <p className={classes.bl_averageFont}>
@@ -179,9 +176,6 @@ const Signup = () => {
         </div>
       ) : (
         <div className={classes.bl_form}>
-          <figure className={classes.bl_imgWrapper}>
-            <img className={classes.bl_myImgSize} src={LOGO} alt="MyLogo" />
-          </figure>
           <div className={classes.bl_Inforamation}>
             <p className={classes.bl_InforamationP}>ローディング中！</p>
             <p className={classes.bl_InforamationP2}>

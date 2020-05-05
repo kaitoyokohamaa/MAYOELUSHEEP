@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button, ProgressBar } from "react-bootstrap";
 import LOGO from "../../assets/img/logo.jpg";
+import Divider from "@material-ui/core/Divider";
 import "./Register.css";
 import axios from "../../axios";
 const Register = () => {
@@ -40,32 +41,20 @@ const Register = () => {
   };
 
   return (
-    <div
-      style={{
-        textAlign: "left"
-      }}
-    >
-      <div
-        style={{
-          display: "flex"
-        }}
-      >
-        <div className="progressbar_style">
-          <div>
-            <img
-              src={LOGO}
-              alt="logo"
-              style={{
-                width: "250px",
-                paddingTop: "20px"
-              }}
-            />
-          </div>
-          <ProgressBar animated now={100} />
+    <div className="bl_flexContent">
+      <div className="bl_sidebar">
+        <div className="bl_sidebar_body">
+          <figure className="bl_sidebar_imgWrapper">
+            <img src={LOGO} alt="logo" />
+          </figure>
         </div>
-
-        <Form className="form_size">
-          <p className="intro_name">自己紹介文</p>
+      </div>
+      <div className="bl_form">
+        <div>
+          <p className="bl_styleP locate">自己紹介文</p>
+          <Divider />
+        </div>
+        <Form className="bl_formly">
           <Form.Group controlId="formGroupProfile">
             <Form.Label>プロフィール</Form.Label>
             <Form.Control
@@ -101,10 +90,10 @@ const Register = () => {
             />
           </Form.Group>
           <Button
+            className="bl_btn size"
             onClick={register}
             variant="danger"
             type="submit"
-            style={{ width: "100%", marginTop: "10%" }}
           >
             登録
           </Button>

@@ -1,14 +1,23 @@
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "../../axios";
 import LOGO from "../../assets/img/logo.jpg";
 import Divider from "@material-ui/core/Divider";
 import { Button } from "react-bootstrap";
 import "./Profile.css";
+
 export default class Profile extends Component {
   state = {
     images: null
   };
+
+  componentDidMount() {
+    if (localStorage.getItem("name") === null) {
+      return <Redirect to="/" />;
+    }
+  }
+
   fileSelectedHandler = event => {
     this.setState({
       images: event.target.files[0]
@@ -34,7 +43,7 @@ export default class Profile extends Component {
             </div>
           </div>
           <div className="bl_imgUploadBody">
-            <p className="bl_imgUploadP">画像をアップロードしてください</p>
+            <p className="bl_styleP">画像をアップロードしてください</p>
             <Divider />
             <label
               className="bl_imgUploadLabel"

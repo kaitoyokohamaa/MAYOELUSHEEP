@@ -1,27 +1,27 @@
-.form-control {
-    display: block;
-    width: 100%;
-    height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
+.bl_form {
+    margin: 0 auto;
+    width: 30%;
+    margin-top: 65px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+    font-size: 16px;
     line-height: 1.5;
-    background-color: #fff;
-    border: 1px solid black;
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    padding: 20px;
+    margin-bottom: 185px;
+
 }
 
-.form_size {
-    width: 20%;
+.locate {
+    text-align: center;
+}
+
+.bl_formly {
+    width: 100%;
     margin: 0 auto;
     margin-top: 10%;
 }
 
-.progressbar_style {
-    background-color: white;
-    height: 100vh;
-    width: 20%;
-    box-shadow: 10px 10px 15px -10px;
+.size {
+    width: 100%
 }
 
 @media screen and (max-width: 414px) {
