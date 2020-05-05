@@ -20,6 +20,7 @@ export default class Profile extends Component {
       console.log(res);
     });
   };
+
   render() {
     return (
       <div
