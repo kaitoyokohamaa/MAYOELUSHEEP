@@ -13,7 +13,7 @@ export default class Profile extends Component {
   };
 
   componentDidMount() {
-    if (localStorage.getItem("name") === null) {
+    if (localStorage.getItem("name") === "") {
       return <Redirect to="/" />;
     }
   }

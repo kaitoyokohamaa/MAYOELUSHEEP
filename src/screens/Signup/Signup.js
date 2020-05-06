@@ -116,11 +116,14 @@ const Signup = () => {
                   setOld(event.target.value);
                 }}
               >
-                {age.map((ages, i) => (
-                  <option key={i} value={ages}>
+                {age.map((ages, i) => {
+                  if( i > 17){
+                    return(
+                    <option key={ages}>
                     {i}
                   </option>
-                ))}
+                   )
+                }})}
               </Form.Control>
             </Form.Group>
             <Form.Group>
@@ -177,7 +180,7 @@ const Signup = () => {
       ) : (
         <div className={classes.bl_form}>
           <div className={classes.bl_Inforamation}>
-            <p className={classes.bl_InforamationP}>ローディング中！</p>
+            <p className={classes.bl_InforamationP}>新規登録</p>
             <p className={classes.bl_InforamationP2}>
               以下の項目にご記入の上、「始める」ボタンを押してください。
             </p>
@@ -222,11 +225,14 @@ const Signup = () => {
                   setOld(event.target.value);
                 }}
               >
-                {age.map((ages, i) => (
-                  <option key={i} value={ages}>
-                    {ages}
+               {age.map((ages, i) => {
+                  if( i > 17){
+                    return(
+                    <option key={ages}>
+                    {i}
                   </option>
-                ))}
+                   )
+                }})}
               </Form.Control>
             </Form.Group>
             <Form.Group>
