@@ -4,7 +4,7 @@ import { Form } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import Divider from "@material-ui/core/Divider";
 import { Redirect } from "react-router-dom";
-import LOGO from "../../assets/img/logo.jpg";
+
 import axios from "../../axios";
 import classes from "./Signup.module.css";
 const Signup = () => {
@@ -70,17 +70,14 @@ const Signup = () => {
     <div>
       {Loading ? (
         <div className={classes.bl_form}>
-          <figure className={classes.bl_imgWrapper}>
-            <img className={classes.bl_myImg} src={LOGO} alt="MyLogo" />
-          </figure>
           <div className={classes.bl_Inforamation}>
             <p className={classes.bl_InforamationP}>新規登録</p>
-            <p className={classes.bl_InforamationP2}>
+            <p className={classes.bl_averageFont}>
               以下の項目にご記入の上、「始める」ボタンを押してください。
             </p>
           </div>
           <Divider />
-          <Form className={classes.form}>
+          <Form className={classes.bl_averageFont}>
             <Form.Group controlId="formBasicEmail">
               <Form.Label>お名前</Form.Label>
               <Form.Control
@@ -119,11 +116,14 @@ const Signup = () => {
                   setOld(event.target.value);
                 }}
               >
-                {age.map((ages, i) => (
-                  <option key={i} value={ages}>
+                {age.map((ages, i) => {
+                  if( i > 17){
+                    return(
+                    <option key={ages}>
                     {i}
                   </option>
-                ))}
+                   )
+                }})}
               </Form.Control>
             </Form.Group>
             <Form.Group>
@@ -179,11 +179,8 @@ const Signup = () => {
         </div>
       ) : (
         <div className={classes.bl_form}>
-          <figure className={classes.bl_imgWrapper}>
-            <img className={classes.bl_myImg} src={LOGO} alt="MyLogo" />
-          </figure>
           <div className={classes.bl_Inforamation}>
-            <p className={classes.bl_InforamationP}>ローディング中！</p>
+            <p className={classes.bl_InforamationP}>新規登録</p>
             <p className={classes.bl_InforamationP2}>
               以下の項目にご記入の上、「始める」ボタンを押してください。
             </p>
@@ -228,11 +225,14 @@ const Signup = () => {
                   setOld(event.target.value);
                 }}
               >
-                {age.map((ages, i) => (
-                  <option key={i} value={ages}>
-                    {ages}
+               {age.map((ages, i) => {
+                  if( i > 17){
+                    return(
+                    <option key={ages}>
+                    {i}
                   </option>
-                ))}
+                   )
+                }})}
               </Form.Control>
             </Form.Group>
             <Form.Group>

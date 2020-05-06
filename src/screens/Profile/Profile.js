@@ -1,13 +1,23 @@
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "../../axios";
 import LOGO from "../../assets/img/logo.jpg";
-import { Col, Row, Container, Button, ProgressBar } from "react-bootstrap";
+import Divider from "@material-ui/core/Divider";
+import { Button } from "react-bootstrap";
 import "./Profile.css";
+
 export default class Profile extends Component {
   state = {
     images: null
   };
+
+  componentDidMount() {
+    if (localStorage.getItem("name") === "") {
+      return <Redirect to="/" />;
+    }
+  }
+
   fileSelectedHandler = event => {
     this.setState({
       images: event.target.files[0]
@@ -23,70 +33,43 @@ export default class Profile extends Component {
 
   render() {
     return (
-      <div
-        style={{
-          textAlign: "left",
-          paddingLeft: "20px"
-        }}
-      >
-        <div
-          style={{
-            display: "flex"
-          }}
-        >
-          <div className="sidebar">
-            <div className="progressbarstyle">
-              <div>
-                <img
-                  src={LOGO}
-                  alt="logo"
-                  style={{
-                    width: "250px",
-                    paddingTop: "20px"
-                  }}
-                />
-              </div>
-              <ProgressBar animated now={45} />
+      <div className="bl_imgUpload">
+        <div className="bl_flexContent">
+          <div className="bl_sidebar">
+            <div className="bl_sidebar_body">
+              <figure className="bl_sidebar_imgWrapper">
+                <img src={LOGO} alt="logo" />
+              </figure>
             </div>
           </div>
-          <Container
-            style={{
-              textAlign: "center"
-            }}
-          >
-            <Row>
-              <Col>
-                <div>
-                  <p className="mainname">
-                    プロフィールにしたい画像をアップロードしよう！
-                  </p>
-                  <label
-                    className="img_upload"
-                    htmlFor="file_upload"
-                    onChange={this.fileSelectedHandler}
-                  >
-                    +
-                  </label>
-                  <input
-                    style={{ padding: "25%", display: "none" }}
-                    id="file_upload"
-                    type="file"
-                    multiple
-                    onChange={this.fileSelectedHandler}
-                  />
-                </div>
-
-                <Button
-                  variant="danger"
-                  className="registerBtn"
-                  type="button"
-                  onClick={this.fileUploadHandler}
-                >
-                  登録
-                </Button>
-              </Col>
-            </Row>
-          </Container>
+          <div className="bl_imgUploadBody">
+            <p className="bl_styleP">画像をアップロードしてください</p>
+            <Divider />
+            <label
+              className="bl_imgUploadLabel"
+              htmlFor="file_upload"
+              onChange={this.fileSelectedHandler}
+            >
+              +
+            </label>
+            <input
+              className="dlete_style"
+              id="file_upload"
+              type="file"
+              multiple
+              onChange={this.fileSelectedHandler}
+            />
+            <div>
+              <Button
+                variant="danger"
+                className="bl_btn"
+                type="button"
+                onClick={this.fileUploadHandler}
+              >
+                登録
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     );

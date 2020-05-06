@@ -1,43 +1,53 @@
-.progress {
-  transform: rotate(90deg);
-  margin-top: 266px;
-  width: 400px;
-  margin-left: -65px;
+.bl_sidebar {
+  border-right: 1px solid #e8e8e9;
+  height: 100vh
 }
 
-.progress-bar.progress-bar-animated.progress-bar-striped {
-  background-color: #dc3545;
+.bl_flexContent {
+  display: flex;
 }
 
-.progressbarstyle {
-  background-color: white;
-  height: 100vh;
-  width: 85%;
-  box-shadow: 10px 10px 15px -10px;
+.bl_imgUploadBody {
+  margin: 0 auto;
+
 }
 
-.mainname {
-  margin-top: 5%;
-  font-family: serif;
-  font-weight: bold;
+.bl_sidebar {
+  padding-top: 10px;
+  box-shadow: 10px solid #bbb
 }
 
-.registerBtn {
-  width: 25%;
-  padding: 10px 20px;
-  margin: 20px auto
+.bl_btn {
+  width: 90%;
+  margin-top: 20px;
+  border-radius: 10px;
 }
 
-.img_upload {
-  width: "30%";
+.bl_imgUploadLabel {
+  width: 30%;
   background-color: #ececec;
   border-radius: 9%;
   border: 1px solid;
-  padding: 21% 12%;
+  padding: 60% 50% 60% 40%;
   font-size: 45px;
   color: #fff;
-  margin-top: 5%;
+  margin-top: 35%;
 }
+
+
+
+.bl_styleP {
+  font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "Helvetica Neue", Helvetica, Arial, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-weight: 700;
+  letter-spacing: .01em;
+  padding-top: 55px;
+}
+
+.dlete_style {
+  display: none;
+}
+
+
 
 @media screen and (max-width: 414px) {
   .sidebar {
@@ -60,6 +70,4 @@
     padding: 10px 20px;
     margin: 20px auto
   }
-
-
 }
