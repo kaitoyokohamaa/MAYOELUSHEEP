@@ -84,7 +84,7 @@ const Signup = () => {
                 name="name"
                 value={Name}
                 type="name"
-                placeholder="name"
+                placeholder="名前"
                 onChange={event => {
                   setName(event.target.value);
                 }}
@@ -99,7 +99,7 @@ const Signup = () => {
                 name="email"
                 value={Email}
                 type="email"
-                placeholder="Enter email"
+                placeholder="メールアドレス"
                 onChange={event => {
                   setEmail(event.target.value);
                 }}
@@ -117,13 +117,10 @@ const Signup = () => {
                 }}
               >
                 {age.map((ages, i) => {
-                  if( i > 17){
-                    return(
-                    <option key={ages}>
-                    {i}
-                  </option>
-                   )
-                }})}
+                  if (i > 17) {
+                    return <option key={ages}>{i}</option>;
+                  }
+                })}
               </Form.Control>
             </Form.Group>
             <Form.Group>
@@ -147,7 +144,7 @@ const Signup = () => {
                 name="password"
                 type="password"
                 value={Password}
-                placeholder="Password"
+                placeholder="パスワード"
                 onChange={event => {
                   setPassword(event.target.value);
                 }}
@@ -159,7 +156,7 @@ const Signup = () => {
                 name="password_confirm"
                 type="password"
                 value={Password_confirm}
-                placeholder="Password"
+                placeholder="パスワード再確認"
                 onChange={event => {
                   setPassword_confirm(event.target.value);
                 }}
@@ -181,19 +178,19 @@ const Signup = () => {
         <div className={classes.bl_form}>
           <div className={classes.bl_Inforamation}>
             <p className={classes.bl_InforamationP}>新規登録</p>
-            <p className={classes.bl_InforamationP2}>
+            <p className={classes.bl_averageFont}>
               以下の項目にご記入の上、「始める」ボタンを押してください。
             </p>
           </div>
           <Divider />
-          <Form className={classes.form}>
+          <Form className={classes.bl_averageFont}>
             <Form.Group controlId="formBasicEmail">
               <Form.Label>お名前</Form.Label>
               <Form.Control
                 name="name"
                 value={Name}
                 type="name"
-                placeholder="name"
+                placeholder="名前"
                 onChange={event => {
                   setName(event.target.value);
                 }}
@@ -208,7 +205,7 @@ const Signup = () => {
                 name="email"
                 value={Email}
                 type="email"
-                placeholder="Enter email"
+                placeholder="メールアドレス"
                 onChange={event => {
                   setEmail(event.target.value);
                 }}
@@ -225,14 +222,11 @@ const Signup = () => {
                   setOld(event.target.value);
                 }}
               >
-               {age.map((ages, i) => {
-                  if( i > 17){
-                    return(
-                    <option key={ages}>
-                    {i}
-                  </option>
-                   )
-                }})}
+                {age.map((ages, i) => {
+                  if (i > 17) {
+                    return <option key={ages}>{i}</option>;
+                  }
+                })}
               </Form.Control>
             </Form.Group>
             <Form.Group>
@@ -256,7 +250,7 @@ const Signup = () => {
                 name="password"
                 type="password"
                 value={Password}
-                placeholder="Password"
+                placeholder="パスワード"
                 onChange={event => {
                   setPassword(event.target.value);
                 }}
@@ -268,7 +262,7 @@ const Signup = () => {
                 name="password_confirm"
                 type="password"
                 value={Password_confirm}
-                placeholder="Password"
+                placeholder="パスワード再確認"
                 onChange={event => {
                   setPassword_confirm(event.target.value);
                 }}
