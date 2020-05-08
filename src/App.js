@@ -21,7 +21,7 @@ function App() {
         <Route path="/register" component={Register} />
         <Route path="/register" component={Register} />
         <Route path="/chat" component={Chat} />
-        <Route path="/" exact component={Signup} />
+        <Route path="/" exact component={Login} />
       </Switch>
     </div>
   );

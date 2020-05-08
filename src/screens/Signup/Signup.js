@@ -118,7 +118,11 @@ const Signup = () => {
               >
                 {age.map((ages, i) => {
                   if (i > 17) {
-                    return <option key={ages}>{i}</option>;
+                    return (
+                      <option key={i} value={ages}>
+                        {i}
+                      </option>
+                    );
                   }
                 })}
               </Form.Control>

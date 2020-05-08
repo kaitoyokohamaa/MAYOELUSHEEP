@@ -7,6 +7,7 @@ import { Redirect } from "react-router-dom";
 import LOGO from "../../assets/img/logo.jpg";
 import TOP from "../../assets/img/top.jpg";
 import axios from "../../axios";
+import "./Login.css";
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -93,6 +94,7 @@ class Login extends Component {
                       onChange={this.onChange}
                     />
                   </Form.Group>
+
                   <Button
                     variant="danger"
                     type="submit"
@@ -103,6 +105,11 @@ class Login extends Component {
                   >
                     ログイン
                   </Button>
+                  <div className="el_signup">
+                    <p>
+                      会員登録がまだの方は<a href="/signup">こちら</a>
+                    </p>
+                  </div>
                 </Form>
               </Col>
               <Col lg={7}>
