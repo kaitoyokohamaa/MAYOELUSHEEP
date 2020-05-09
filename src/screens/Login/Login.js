@@ -8,7 +8,7 @@ import LOGO from "../../assets/img/logo.jpg";
 import TOP from "../../assets/img/top.jpg";
 import axios from "../../axios";
 import "./Login.css";
-import number from "prop-types";
+
 const Login = () => {
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
@@ -70,7 +70,9 @@ const Login = () => {
                     name="email"
                     type="email"
                     placeholder="Enter email"
-                    onChange={this.onChange}
+                    onChange={event => {
+                      setEmail(event.target.value);
+                    }}
                   />
                 </Form.Group>
                 <Form.Group controlId="formBasicPassword">
@@ -79,14 +81,16 @@ const Login = () => {
                     name="password"
                     type="password"
                     placeholder="Password"
-                    onChange={this.onChange}
+                    onChange={event => {
+                      setPassword(event.target.value);
+                    }}
                   />
                 </Form.Group>
 
                 <Button
                   variant="danger"
                   type="submit"
-                  onClick={this.login}
+                  onClick={login}
                   style={{
                     marginTop: "20px"
                   }}
