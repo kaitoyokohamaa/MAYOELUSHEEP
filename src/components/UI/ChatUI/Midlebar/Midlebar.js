@@ -34,7 +34,10 @@ function Midlebar() {
               <ImageIcon />
             </Avatar>
           </ListItemAvatar>
-          <ListItemText primary="義之" secondary="この資料を明日までに見とけ" />
+          <ListItemText
+            primary="鈴木福"
+            secondary="この資料を明日までに見とけ"
+          />
         </ListItem>
         <Divider />
         <ListItem>
@@ -43,7 +46,7 @@ function Midlebar() {
               <ImageIcon />
             </Avatar>
           </ListItemAvatar>
-          <ListItemText primary="狡噛慎也" secondary="了解だ！" />
+          <ListItemText primary="タラちゃん" secondary="了解だ！" />
         </ListItem>
         <Divider />
         <ListItem>
@@ -53,7 +56,7 @@ function Midlebar() {
             </Avatar>
           </ListItemAvatar>
           <ListItemText
-            primary="常守朱"
+            primary="カツオ"
             secondary="もぉ〜なんか奢ってくださいね！"
           />
         </ListItem>
