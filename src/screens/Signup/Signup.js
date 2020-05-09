@@ -283,3 +283,5 @@ const Signup = () => {
   );
 };
 export default Signup;
+
+export const AuthBtn = () => {};
